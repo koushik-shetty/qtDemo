@@ -5,5 +5,6 @@
         <file>NoteToolbar.qml</file>
         <file>Note.qml</file>
         <file>Page.qml</file>
+        <file>Marker.qml</file>
     </qresource>
 </RCC>

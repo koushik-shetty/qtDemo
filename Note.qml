@@ -13,7 +13,7 @@ Rectangle {
         id:notetoolbar
         //width: 200
         //height: 30
-        setText:  (qStr("note1"))
+        onParentChanged:  setText(qStr("note1"))
         anchors{
             top:root.top
             right: root.right
