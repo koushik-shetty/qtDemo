@@ -14,11 +14,11 @@ ApplicationWindow {
             title: qsTr("&File")
             MenuItem {
                 text: qsTr("&Open")
-                onTriggered: messageDialog.show(qsTr("Open action triggered"));
+                onTriggered: messageDialog.show(qsTr("Open action triggered"))
             }
             MenuItem {
                 text: qsTr("E&xit")
-                onTriggered: Qt.quit();
+                onTriggered: Qt.quit()
             }
         }
     }
@@ -51,18 +51,15 @@ ApplicationWindow {
                 y: 0
                 width: 287
                 height: 63
-                function onMouseMove(){
-                    if(parent.color == "#00cc00"){
-                     parent.color = "#cc0000"
-                    }
-                    else{
-                        parent.color="#00cc00"
-                    }
 
-
+                Note{
+                    id: note1
+                    anchors.centerIn: howerRect
+                    visible: false
                 }
-                onEntered:parent.color = "#00cc00"
-                onExited: parent.color = "#ee9000"
+
+                onEntered:note1.visible=true
+                //onExited: howerRect.color = "#ee9000"
 //                onMouseXChanged: onMouseMove()
             }
 
