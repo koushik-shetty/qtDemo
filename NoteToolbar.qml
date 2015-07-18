@@ -11,6 +11,12 @@ Rectangle {
     Label{
         id:toolText
         text:qStr("note1")
+        visible: true
     }
+
+    function setText(text){
+        toolText.text = qStr(text)
+    }
+
 }
 

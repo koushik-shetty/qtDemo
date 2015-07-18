@@ -4,5 +4,6 @@
         <file>MainForm.ui.qml</file>
         <file>NoteToolbar.qml</file>
         <file>Note.qml</file>
+        <file>Page.qml</file>
     </qresource>
 </RCC>
