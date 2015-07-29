@@ -1,6 +1,7 @@
 import QtQuick 2.0
 
 Rectangle {
+    id:root
     width: 600
     height: 300
     color:"#000000"
@@ -13,7 +14,11 @@ Rectangle {
         id:note2
         x:300
         y:90
-
     }
+
+//    MarkerPanel{
+//        id:pageSelect
+//        anchors.right: root.right
+//    }
 }
 

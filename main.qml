@@ -3,76 +3,51 @@ import QtQuick.Controls 1.3
 import QtQuick.Window 2.2
 import QtQuick.Dialogs 1.2
 
-ApplicationWindow {
-    title: qsTr("Hello World")
-    width: 640
-    height: 480
-    visible: true
+//ApplicationWindow {
+//    title: qsTr("Hello World")
+//    width: 640
+//    height: 480
+//    visible: true
 
-    menuBar: MenuBar {
-        Menu {
-            title: qsTr("&File")
-            MenuItem {
-                text: qsTr("&Open")
-                onTriggered: messageDialog.show(qsTr("Open action triggered"))
+
+//    MainForm {
+//        anchors.fill: parent
+
+        Rectangle{
+            id:toolBar
+            color: "#000000"
+            width: 30
+            anchors{
+                top:Window.left
+                right:Window.right
+                bottom: Window.bottom
+                topMargin: 100
+                bottomMargin: 100
             }
-            MenuItem {
-                text: qsTr("E&xit")
-                onTriggered: Qt.quit()
-            }
-        }
-    }
-
-    MainForm {
-        anchors.fill: parent
-        button1.onClicked: messageDialog.show(qsTr("Button 1 pressed"))
-        button2.onClicked: messageDialog.show(qsTr("Button 2 pressed"))
-        button3.onClicked: messageDialog.show(qsTr("Button 3 pressed"))
-
-
-        Rectangle {
-            id: howerRect
-            Label{
-                text: "Click Me!"
-                anchors.centerIn: parent
-            }
-
-            x: 172
-            y: 13
-            width: 287
-            height: 63
-            color: "#cc9000"
-            rotation: 0
-
-
-            MouseArea {
-                id: howerRectMouseArea
-                x: 0
-                y: 0
-                width: 287
-                height: 63
-
-                Note{
-                    id: note1
-                    anchors.centerIn: howerRect
-                    visible: false
+            Column{
+                anchors.fill: parent
+                anchors.topMargin: 30
+                spacing: 30
+                Repeater{
+                    model: 2
+                    Rectangle{width: 50; height:50; color:"red";}
                 }
-
-                onEntered:note1.visible=true
-                //onExited: howerRect.color = "#ee9000"
-//                onMouseXChanged: onMouseMove()
             }
-
         }
-    }
+//    }
+//}
 
-    MessageDialog {
-        id: messageDialog
-        title: qsTr("May I have your attention, please?")
 
-        function show(caption) {
-            messageDialog.text = caption
-            messageDialog.open()
+        // creating a Page items
+        Page {
+            id: page1
+            anchors {
+                top: window.top
+                bottom: window.bottom
+                right: markerPanel.left
+                left: toolBar.right
+            }
         }
-    }
-}
+//    }
+//}
+

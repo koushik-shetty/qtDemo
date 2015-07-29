@@ -21,6 +21,8 @@ Rectangle {
         }
     }
 
+
+
     TextEdit{
         id:editarea
         width: 200

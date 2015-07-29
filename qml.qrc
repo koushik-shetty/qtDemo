@@ -6,5 +6,6 @@
         <file>Note.qml</file>
         <file>Page.qml</file>
         <file>Marker.qml</file>
+        <file>MarkerPanel.qml</file>
     </qresource>
 </RCC>
