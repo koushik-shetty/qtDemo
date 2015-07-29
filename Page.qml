@@ -16,9 +16,9 @@ Rectangle {
         y:90
     }
 
-//    MarkerPanel{
-//        id:pageSelect
-//        anchors.right: root.right
-//    }
+    MarkerPanel{
+        id:pageSelect
+        anchors.right: root.right
+    }
 }
 
